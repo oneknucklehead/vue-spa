@@ -3,83 +3,56 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
+<style></style>
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <nav>
+      <div class="nav-wrapper">
+        <img alt="company logo" class="logo" src="@/assets/LogoSrc.svg" />
+        <div class="btn-container">
+          <a href="/login">Login</a>
+          <button class="btn">Register</button>
+        </div>
+      </div>
+    </nav>
 
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
-    </div>
+    </div> -->
   </header>
 
   <RouterView />
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
+  width: 150px;
 }
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.btn-container {
+  height: 100%;
 }
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.btn {
+  margin: 0 0 0 1rem;
+  padding: 0.7rem 1.2rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgba(1, 203, 99, 1);
+  box-shadow: 0px 5px 15px #01cb6359;
+  cursor: pointer;
 }
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.btn:hover {
+  background-color: rgba(1, 203, 99, 0.9);
 }
 </style>
