@@ -57,8 +57,8 @@ import HelloWorld from './components/HelloWorld.vue'
   </div>
 
   <div class="courses-container">
-    <p>Courses</p>
-    <h1>Our Most Popular Courses</h1>
+    <p class="pre-header">Courses</p>
+    <h1 class="header">Our Most Popular Courses</h1>
     <div class="courses-wrapper">
       <div class="card">
         <img class="card-img" src="@/assets/card-img1.jpg" />
@@ -132,6 +132,27 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </div>
 
+  <div class="ideas-container">
+    <div class="ideas-content">
+      <p class="pre-header">Top Earners</p>
+      <h1 class="header">Transforming Your Ideas Into Reality</h1>
+      <div class="people-wrapper">
+        <div class="people">
+          <img src="@/assets/people1.png" />
+          <p class="money">₹8,00,000</p>
+        </div>
+        <div class="people">
+          <img src="@/assets/people2.png" />
+          <p class="money">₹6,00,000</p>
+        </div>
+        <div class="people">
+          <img src="@/assets/people3.png" />
+          <p class="money">₹5,00,000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <RouterView />
 </template>
 
@@ -172,14 +193,14 @@ import HelloWorld from './components/HelloWorld.vue'
   grid-template-columns: repeat(2, 1fr);
 }
 .left {
-  height: 60vh;
   background: #01cb63;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .content-container {
-  padding: 3rem;
+  padding: 5rem;
+  width: 80%;
 }
 .left h1 {
   color: #fff;
@@ -196,12 +217,12 @@ import HelloWorld from './components/HelloWorld.vue'
   color: #fff;
 }
 .right {
-  height: 60vh;
+  /* height: 60vh; */
 }
 .right img {
   object-fit: cover;
   width: 100%;
-  height: 60vh;
+  height: 100%;
   filter: brightness(80%) sepia(900%) hue-rotate(50deg) saturate(100%);
 }
 .black {
@@ -242,24 +263,24 @@ import HelloWorld from './components/HelloWorld.vue'
   align-items: center;
   flex-direction: column;
 }
-.courses-container p {
+.pre-header {
   color: #01cb63;
   font-style: italic;
 }
-.courses-container h1 {
+.header {
   margin: 1rem 0 2rem 0;
   color: #1f2532;
   font-weight: 600;
 }
 
 .courses-wrapper {
-  width: 80%;
+  width: 94%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .card {
-  max-width: 300px;
+  max-width: 350px;
   border: 1px solid #e6e6e6;
   border-radius: 15px;
   margin: 2rem;
@@ -267,6 +288,7 @@ import HelloWorld from './components/HelloWorld.vue'
 .card .card-img {
   object-fit: cover;
   width: 100%;
+  height: 250px;
   border-radius: 15px 15px 0px 0px;
 }
 
@@ -330,5 +352,28 @@ import HelloWorld from './components/HelloWorld.vue'
   height: 50px;
   border-radius: 100%;
   margin: 10px 10px 10px 0;
+}
+.ideas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ideas-content {
+  width: 80%;
+}
+.people-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.people {
+  margin: 2rem 0;
+}
+.money {
+  padding: 0 0 0 10px;
+  font-weight: 700;
+  line-height: 80px;
+  border-left: 0.8rem solid #01cb63;
+  height: 80px;
 }
 </style>
