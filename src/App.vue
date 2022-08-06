@@ -202,7 +202,6 @@ import HelloWorld from './components/HelloWorld.vue'
   <div class="contact-container">
     <p class="pre-header">Contact Us</p>
     <h1 class="header">Reach Out with any question you have</h1>
-    <!-- <div class="contact-content"> -->
 
     <div class="contact-wrapper">
       <div class="contacts">
@@ -243,8 +242,16 @@ import HelloWorld from './components/HelloWorld.vue'
         <button class="btn black">Submit</button>
       </div>
     </div>
-    <!-- </div> -->
   </div>
+  <footer>
+    <div class="footer-wrapper">
+      <div>2021-2022 © Course Pro Private Limited</div>
+      <div class="terms">
+        <p>Terms and Condition</p>
+        <p>Privacy Policy</p>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
@@ -568,6 +575,7 @@ input {
 textarea {
   margin: 1.5rem 0;
   border: 2px solid #01cb63;
+  outline: none;
 }
 @media only screen and (max-width: 1010px) {
   .form,
@@ -577,5 +585,27 @@ textarea {
   .contact-wrapper {
     display: block;
   }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+footer div {
+  font-weight: bolder;
+}
+.terms {
+  display: flex;
+}
+.terms p {
+  font-weight: bolder;
+  margin: 0 1rem;
 }
 </style>
