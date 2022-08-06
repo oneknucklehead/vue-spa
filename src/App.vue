@@ -199,7 +199,52 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </div>
 
-  <RouterView />
+  <div class="contact-container">
+    <p class="pre-header">Contact Us</p>
+    <h1 class="header">Reach Out with any question you have</h1>
+    <!-- <div class="contact-content"> -->
+
+    <div class="contact-wrapper">
+      <div class="contacts">
+        <h1 class="header">Contact Information</h1>
+        <div class="contact">
+          <img src="@/assets/msg-icon.png" />
+          <p>contact@coursepro.com</p>
+        </div>
+        <div class="contact">
+          <img src="@/assets/call-icon.png" />
+          <p>1800-562-895, 1800-869-877</p>
+        </div>
+        <div class="contact">
+          <img src="@/assets/location-icon.png" />
+          <p>102 Street, India</p>
+        </div>
+        <h1 class="header">Social Media Channel</h1>
+        <div class="socials">
+          <img src="@/assets/Facebook.png" />
+          <img src="@/assets/Twitter.png" />
+          <img src="@/assets/Github.png" />
+          <img src="@/assets/Linkedin.png" />
+        </div>
+      </div>
+      <div class="form">
+        <h1 class="header">
+          Fill up the form and our team will get back to you within 24 hours
+        </h1>
+        <div class="contact1">
+          <input v-model="name" placeholder="Name" />
+          <input v-model="Email" placeholder="Email" />
+        </div>
+        <div class="contact1">
+          <input v-model="phone" placeholder="Phone" />
+          <input v-model="subject" placeholder="Subject" />
+        </div>
+        <textarea v-model="message" placeholder="Message"></textarea>
+        <button class="btn black">Submit</button>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
 </template>
 
 <style scoped>
@@ -435,7 +480,6 @@ import HelloWorld from './components/HelloWorld.vue'
   justify-content: space-around;
 }
 .compliments {
-  /* border: 1px solid ; */
   max-width: 500px;
   margin: 2rem 0;
   padding: 2rem;
@@ -467,5 +511,71 @@ import HelloWorld from './components/HelloWorld.vue'
 }
 .user-profile .name {
   font-weight: bold;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.contacts {
+  /* width: auto; */
+  max-width: 500px;
+}
+.contacts img {
+  height: 80px;
+  width: 80px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+.contact p {
+  font-weight: bold;
+}
+.socials img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  /* width: auto; */
+  max-width: 500px;
+}
+.form-header {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+.contact1 {
+  display: flex;
+}
+input {
+  margin-right: 10px;
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid #01cb63;
+  outline: none;
+}
+textarea {
+  margin: 1.5rem 0;
+  border: 2px solid #01cb63;
+}
+@media only screen and (max-width: 1010px) {
+  .form,
+  .contacts {
+    max-width: none;
+  }
+  .contact-wrapper {
+    display: block;
+  }
 }
 </style>
