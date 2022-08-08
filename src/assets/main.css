@@ -31,3 +31,12 @@ a:visited {
   background-color: rgba(1, 203, 99, 0.9);
   transition: all 0.2s ease-in-out;
 }
+.pre-header {
+  color: #01cb63;
+  font-style: italic;
+}
+.header {
+  margin: 1rem 0 2rem 0;
+  color: #1f2532;
+  font-weight: 600;
+}

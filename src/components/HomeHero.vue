@@ -65,6 +65,7 @@ export default {
   color: #fff;
   font-style: italic;
   transition: all 0.2s ease-in-out;
+  box-shadow: 0px 5px 15px #00000028;
   margin: 0;
   width: 50%;
 }
